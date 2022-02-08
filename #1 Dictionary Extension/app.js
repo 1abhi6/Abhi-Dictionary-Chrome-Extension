@@ -2,7 +2,7 @@
 const resultDiv = document.querySelector('.result');
 const wordEle = document.querySelector('.word');
 const phonetics = document.querySelector('.phonetics');
-const audio = document.querySelector('audio');
+// const audio = document.querySelector('audio');
 const wordMeaning = document.querySelector('.word-defination');
 const synonyms = document.querySelector('.synonyms');
 const keypress = document.querySelector('#keypress');
@@ -22,7 +22,7 @@ keypress.onkeypress = async (e) => {
         resultDiv.style.display = "block";
         wordEle.innerText = data[0].word;
         phonetics.innerText = data[0].phonetics[0].text;
-        audio.src = data[0].phonetics[0].audio;
+        // audio.src = data[0].phonetics[0].audio;
         wordMeaning.innerText = data[0].meanings[0].definitions[0].definition;
         const synonymsArray = data[0].meanings[0].definitions[0].synonyms;
         if (synonymsArray) {
